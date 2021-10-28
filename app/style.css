@@ -1,0 +1,99 @@
+/* CSS files add styling rules to your content */
+
+
+body {
+  margin: 5px;
+  font-family: 'Noto Sans', sans-serif;
+	background-size: cover;
+	background-attachment: fixed; 
+}
+
+p.red {
+  color:  red;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.cover {
+  height:400px;
+  background-image:url(https://cdn.glitch.com/5f035f47-de1c-4529-a25e-f6844d784a96%2Fdiscussing-video-course.jpg?v=1632385489430);
+  color:white;
+  background-size: cover;
+  background-position:center;
+  background-color:rgba(0,0,0,0.5);
+  background-blend-mode: darken ;
+}
+
+.cover-small{
+  height:250px;
+  color:white;
+  background-size: cover;
+  background-position:center;
+  background-color:rgba(39,101,255,0.5);
+  background-blend-mode:darken;
+}
+
+
+
+/* Navigation grid */
+.footer {  
+  background-color: rgba(39,101,255,0.8);  
+  background-blend-mode:darken;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 35px 40px;
+  margin: 4rem auto 0;
+}
+
+ @media (max-width:991.98px) {
+     .padding {
+         padding: 1.5rem
+     }
+ }
+
+ @media (max-width:767.98px) {
+     .padding {
+         padding: 1rem
+     }
+ }
+
+ .padding {
+     padding: 3rem
+ }
+.btn.btn-social-icon {
+     width: 50px;
+     height: 50px;
+     padding: 0
+ }
+
+.btn-outline-twitter {
+     border: 1px solid #2caae1;
+     color: #2caae1
+ }
+
+ .btn-outline-twitter:hover {
+     background: #2caae1;
+     color: #ffffff
+ }
+
+.btn-outline-github {
+     border: 1px solid #2caae1;
+     color: #000000
+ }
+
+ .btn-outline-github:hover {
+     background: #000000;
+     color: #ffffff
+ }
+
+ aside{
+  padding:5px;
+ }
+
+table, th, td {
+  padding:15px;
+ /* border: 1px solid black;
+  border-collapse: collapse;*/
+}
