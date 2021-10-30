@@ -1,2 +1,2 @@
 # Segurtasuna
-Segurtasuna irakasgaian proeiktuan egindakoa igotzen joango gara
+Segurtasuna proeiktuan egindakoa igotzen joango gara
