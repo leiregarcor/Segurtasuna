@@ -5,7 +5,7 @@ session_start();
 
 $id= $_GET['id']; #lortu dugu aldatu nahi dugun apuntearen Id
 
-$apuntea = "DELETE FROM `Apunte` WHERE `Id` = '$id'";
+$apuntea = "SELECT FROM `Apunte` WHERE `Id` = '$id'";
 
 $rst=mysqli_query($conn,$apuntea);
 

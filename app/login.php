@@ -37,7 +37,7 @@ session_start();
     />
 
     <!-- Import the webpage's javascript file -->
-    <script type="text/javascript" src="/funtzioak.js"></script>
+    <script type="text/javascript" src="./funtzioak.js"></script>
 
   </head>
 
