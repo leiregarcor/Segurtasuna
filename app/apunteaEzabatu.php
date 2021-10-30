@@ -3,7 +3,7 @@ require "DBKonexioa.php";
 
 session_start();
 
-$id= $_GET['id']; #lortu dugu aldatu nahi dugun apuntearen Id
+$id= $_POST['id']; #lortu dugu aldatu nahi dugun apuntearen Id
 
 $apuntea = "SELECT FROM `Apunte` WHERE `Id` = '$id'";
 

@@ -1,3 +1,9 @@
+$(document).on("click", "#btnModal", function(){
+    var id =$(this).data('id');
+    $("#id").val(id);
+}
+);
+
 function nan(dni) {
     var zenbaki
     var letr

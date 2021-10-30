@@ -8,9 +8,6 @@ session_start();
 $apunteak = "SELECT * FROM `Apunte` WHERE `Id` = '$id'";
 $rst=mysqli_query($conn,$apunteak);
 $row = mysqli_fetch_array($rst);
-
-
-
 ?>
 
 <!DOCTYPE html>

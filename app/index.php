@@ -21,8 +21,9 @@ $rst=mysqli_query($conn,$apunteak);
         <p style="font-size:140%; font-family:cambria"> Ongi etorri gure apunteen bankura </p>
       </div>
     </header>
-    
-    
+
+    <?php require "partials/modalEzabatu.php";?>
+
     <div class="container">
       <div class="row">
         <div class="col-sm-4">      
@@ -54,7 +55,7 @@ $rst=mysqli_query($conn,$apunteak);
                   <td><a href='{$row['Fitxategia']}' class='badge badge-info' target='blank'>LINK</a></td>
                   <td>{$row['ErabLDAP']}</td>
                   <td><a href='apunteaAldatu.php?id={$row['Id']}' class='badge badge-warning'>editatu</a></td>
-                  <td><a href='apunteaEzabatu.php?id={$row['Id']}' class='badge badge-danger'>ezabatu</a></td>
+                  <td><button id='btnModal' type='button' class='badge badge-danger' data-id='{$row['Id']}' data-toggle='modal' data-target='#modalEzabatu'>ezabatu</button></td>
                 </tr>";
               }
               ?>
