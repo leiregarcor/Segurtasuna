@@ -30,14 +30,12 @@ $row = mysqli_fetch_array($rst);
     <div class=" d-flex justify-content-center align-items-center">
       <form>
         <br>
+        <!-- Aldatzeko/atzera joateko botoiak -->
         <div class= " d-flex justify-content-end">
-          <input
-          class="btn btn-outline-success"
-          type="submit"
-          value="Deuseztatu"
-        />          
-        <input class="btn btn-outline-danger" type="reset" value="Aldatu" />
+          <a class="btn btn-outline-success" type="button" href="index.php"> Deuseztatu </a>         
+          <input class="btn btn-outline-danger" type="reset" value="Aldatu" />
         </div>
+
         <div class="form-row">
           <div class="form-group col-md-6">
             <br />

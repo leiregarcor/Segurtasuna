@@ -1,7 +1,17 @@
 <?php
 require "DBKonexioa.php";
 
+session_start();
+
 $id= $_GET['id']; #lortu dugu aldatu nahi dugun apuntearen Id
 
-echo "$id ezabatu nahi duzun apuntearen ID-a da";
+$apuntea = "DELETE FROM `Apunte` WHERE `Id` = '$id'";
+
+$rst=mysqli_query($conn,$apuntea);
+
+if($rst){
+    header("Location: http://localhost:81/index.php");
+      exit;  
+}
+
 ?>
