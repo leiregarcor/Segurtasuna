@@ -1,6 +1,16 @@
 $(document).on("click", "#btnModal", function(){
-    var id =$(this).data('id');
+    var IdEzabatu =$(this).data('id');
     $("#id").val(id);
+    //id-a bidaltzeko modalera:
+    //ezin da zuzenean php sesioko bariable batean gorde, beraz ajax erabiliz php orrira bidaliko dugu bariablea
+    $.ajax({
+        url: '../partiasl/modalEzabatu.php',
+        type: 'GET',
+        data: {"IdEzabatu":IdEzabatu},
+        success: function(data, textStatus, xhr) {
+          
+        }
+      });
 }
 );
 

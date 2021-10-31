@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $IdEzabatu=$_GET['IdEzabatu'];
+?>
+
 <!-- Modal -->
 <div class="modal fade" id="modalEzabatu" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -11,6 +16,10 @@
       <div class="modal-body">
 
         <input type="text" id="id">
+        <?php
+            echo"<p> ezabatu nahi den apunteraen id: {$IdEzabatu} </p>";
+        ?>
+
         <!-- <input type="hidden" id="id"> -->
         
         <div class="form-row">
