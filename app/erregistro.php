@@ -34,7 +34,7 @@
           <div class="form-group col-md-6">
             <br />
             <label>LDAP</label>
-            <input name="LDAP" type="text" class="form-control" placeholder="123456" />
+            <input name="LDAP" type="text" class="form-control" placeholder="123456" id="LDAP" />
           </div>
           <div class="form-group col-md-6">
             <br />
@@ -60,7 +60,7 @@
           </div>
           <div class="form-group col-md-6">
             <label>Telefono zenbakia</label>
-            <input name="telefono" type="text" class="form-control" placeholder="987654321" />
+            <input name="telefono" type="text" class="form-control" placeholder="987654321" id="tel"/>
           </div>
         </div>
 

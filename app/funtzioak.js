@@ -42,11 +42,31 @@ function email(mail) {
     }
     return ema;
 }
+function LDAP(ldap) {
+    var ema=false;
+    if(ldap.length==6){
+        ema=true;
+    }else{
+        alert ("LDAP-ak 6 zenbaki izan behar ditu.");
+    }
+    return ema;
+}
+function telefono(tel) {
+    var ema=false;
+    if(tel.length==9){
+        ema=true;
+    }else{
+        alert ("Telefonoak 9 zenbaki izan behar ditu.");
+    }
+    return ema;
+}
 function konprobaketa() {
 
     var dni = document.getElementById("NAN").value;
     var mail = document.getElementById("mail").value;
-    if(nan(dni) && email(mail)){
+    var ldap = document.getElementById("LDAP").value;
+    var tel = document.getElementById("tel").value;
+    if(nan(dni) && email(mail) && LDAP(ldap) && telefono(tel)){
         document.erregistroForm.submit();
     }
 }
