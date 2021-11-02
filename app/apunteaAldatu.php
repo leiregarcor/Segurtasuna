@@ -24,7 +24,7 @@ $row = mysqli_fetch_array($rst);
 
   <body>
     <div class=" d-flex justify-content-center align-items-center">
-      <form>
+      <form action="apunteaAldatu.php" method="POST" >
         <br>
         <div class="form-row">
           <div class="form-group col-md-6">

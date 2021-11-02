@@ -42,7 +42,7 @@ $query = mysqli_query($conn, $sql);
             <br />
             <label>LDAP</label>
             <?php echo"
-                <input type='text' class='form-control'  value='{$row['LDAP']}' id='LDAP2'/>
+                <input type='text' class='form-control'  value='{$row['LDAP']}' id='LDAP2' readonly/>
             ";?>
           </div>
           <div class="form-group col-md-6">
@@ -113,6 +113,6 @@ $query = mysqli_query($conn, $sql);
       </form>
     </div>
 
-    <footer class="footer"></footer>
+    <?php require 'partials/footer.php' ?>
   </body>
 </html>

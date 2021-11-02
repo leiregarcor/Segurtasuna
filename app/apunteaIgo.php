@@ -1,5 +1,82 @@
 <?php
-    require "DBKonexioa.php";
+require "DBKonexioa.php";
 
-    echo "Sartu igo nahi duzun apuntearen datuak";
+session_start();
+
+$LDAP= $_SESSION['LDAP']; #uneko erabiltzailearen LDAP ( orain apunteak igoko dituena)
+
+$irakasgaia= $_GET['irakasgaia'];
+$gradua= $_GET['gradua'];
+$kurtsoa= $_GET['kurtsoa'];
+$fitx= $_GET['fitx'];
+
+$apunteak = "INSERT INTO `Apunte` VALUES (NULL, CURDATE(),'$irakasgaia','$gradua','$kurtsoa','$fitx','$LDAP')";
+$rst=mysqli_query($conn,$apunteak);
+
+if($rst){
+    header("Location: http://localhost:81/index.php");
+    exit;
+  }
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+    
+    <?php require "partials/head.php";?>
+
+  <body>
+    <header>
+     <div class="cover d-flex justify-content-start align-items-start flex-column p-5">
+
+      </div>
+    </header>
+
+  <body>
+    <div class=" d-flex justify-content-center align-items-center">
+      <form action="apunteaIgo.php" method="POST" >
+        <br>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <br />
+            <label>Gradua</label>
+            <select name="gradua" class="form-control">
+                <option selected>Ingenieritza informatikoa</option>
+                <option>Ingenieritza Mekanikoa</option>
+                <option>Ingenieritza Elektronikoa</option>
+                <option>Ingenieritza Industriala</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <br />
+            <label>Kurtsoa</label>
+            <input type='text' name="kurtsoa" class='form-control' placeholder="3" required/>
+          </div>
+        </div>
+        <div>
+            <label>Irakasgaia</label>
+            <input type='text' name="irakasgaia" class='form-control' placeholder="SEO" required/>             
+        </div>
+        <br>
+        <div>
+            <label>Egilea</label>
+            <?php echo"
+                <input type='text' class='form-control'  value='{$LDAP}' readonly/>
+            ";?>
+        </div>
+        <br>
+        <div>
+            <label>Link</label>            
+            <input type='text' class='form-control' name="fitx" placeholder="www.google.com" required/>    
+        </div>
+        <br>
+        <!-- Gordetzeko/atzera joateko botoiak -->
+        <input class="btn btn-outline-success" type="submit" value="Gorde" />
+        <a class="btn btn-outline-danger" type="button" href="index.php"> Atzera </a>  
+
+      </form>
+    </div>
+
+    <?php require 'partials/footer.php' ?>
+  </body>
+</html>
+
