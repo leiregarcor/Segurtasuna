@@ -5,13 +5,15 @@ session_start();
 
 $id= $_POST['id']; #lortu dugu aldatu nahi dugun apuntearen Id
 
-$apuntea = "SELECT FROM `Apunte` WHERE `Id` = '$id'";
+$apuntea = " DELETE FROM `Apunte` WHERE `Id` = '$id'";
 
 $rst=mysqli_query($conn,$apuntea);
 
 if($rst){
-    header("Location: http://localhost:81/index.php");
-      exit;  
+  header("Location: http://localhost:81/index.php");
+    exit;  
 }
+
+
 
 ?>

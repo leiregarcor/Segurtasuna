@@ -3,6 +3,8 @@ require "DBKonexioa.php";
 
 session_start();
 
+$IdEzabatu="";
+
 $gradua="Ingenieritza informatikoa"; #hemen erabiltzailearen gradua jarriko dugu
 $apunteak = "SELECT * FROM `Apunte` WHERE `Gradua` = '$gradua'";
 $rst=mysqli_query($conn,$apunteak);
@@ -22,7 +24,34 @@ $rst=mysqli_query($conn,$apunteak);
       </div>
     </header>
 
-    <?php require "partials/modalEzabatu.php";?>
+        
+    <!-- Modal -->
+    <div class="modal fade" id="modalEzabatu" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Benetan ezabatu nahi duzu?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="apunteaEzabatu.php" method="POST" >
+              <input name="id" type="hidden" id="id" value="id">
+                            
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <button type="button" class="btn btn-success form-control" data-dismiss="modal">Ez</button>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-danger form-control">Bai</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Modal amaiera -->
 
     <div class="container">
       <div class="row">
