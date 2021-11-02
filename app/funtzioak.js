@@ -3,13 +3,7 @@ $(document).on("click", "#btnModal", function(){
     $("#id").val(IdEzabatu);
     //id-a bidaltzeko modalera:
     //ezin da zuzenean php sesioko bariable batean gorde, beraz ajax erabiliz php orrira bidaliko dugu bariablea
-    $.ajax({
-        url: "../partiasl/index.php?="+IdEzabatu,
-        cache: false,
-        success: function(result) {
-          
-        }
-      });
+
 }
 );
 

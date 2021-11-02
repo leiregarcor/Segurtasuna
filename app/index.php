@@ -5,7 +5,7 @@ session_start();
 
 $IdEzabatu="";
 
-$gradua="Ingenieritza informatikoa"; #hemen erabiltzailearen gradua jarriko dugu
+$gradua=$_SESSION['Gradu']; #hemen erabiltzailearen gradua jarriko dugu
 $apunteak = "SELECT * FROM `Apunte` WHERE `Gradua` = '$gradua'";
 $rst=mysqli_query($conn,$apunteak);
 
@@ -38,7 +38,7 @@ $rst=mysqli_query($conn,$apunteak);
           <div class="modal-body">
             <form action="apunteaEzabatu.php" method="POST" >
               <input name="id" type="hidden" id="id" value="id">
-                            
+
               <div class="form-row">
                 <div class="form-group col-md-6">
                     <button type="button" class="btn btn-success form-control" data-dismiss="modal">Ez</button>

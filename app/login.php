@@ -10,7 +10,9 @@ session_start();
     $query = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($query);
 
-    if($row['LDAP']!=null){      
+    if($row['LDAP']!=null){ 
+      $_SESSION['LDAP'] = $erabiltzaile;  
+      $_SESSION['Gradu'] = $row['Gradua'];   
       header("Location: http://localhost:81/index.php");
       exit;      
     }
