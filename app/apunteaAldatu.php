@@ -26,12 +26,6 @@ $row = mysqli_fetch_array($rst);
     <div class=" d-flex justify-content-center align-items-center">
       <form>
         <br>
-        <!-- Aldatzeko/atzera joateko botoiak -->
-        <div class= " d-flex justify-content-end">
-          <a class="btn btn-outline-success" type="button" href="index.php"> Deuseztatu </a>         
-          <input class="btn btn-outline-danger" type="reset" value="Aldatu" />
-        </div>
-
         <div class="form-row">
           <div class="form-group col-md-6">
             <br />
@@ -69,7 +63,11 @@ $row = mysqli_fetch_array($rst);
                 <input type='text' class='form-control'  value='{$row['Fitxategia']}'/>
             ";?>
         </div>
-
+        <br>
+        <!-- Aldatzeko/atzera joateko botoiak -->
+        <a class="btn btn-outline-success" type="button" href="index.php"> Deuseztatu </a>         
+        <input class="btn btn-outline-danger" type="reset" value="Aldatu" />
+   
       </form>
     </div>
 

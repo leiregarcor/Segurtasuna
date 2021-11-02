@@ -70,3 +70,12 @@ function konprobaketa() {
         document.erregistroForm.submit();
     }
 }
+function konprobaketa2() {
+
+    var dni = document.getElementById("NAN2").value;
+    var mail = document.getElementById("mail2").value;
+    var tel = document.getElementById("tel2").value;
+    if(nan(dni) && email(mail) && telefono(tel)){
+        document.profilaForm.submit();
+    }
+}
