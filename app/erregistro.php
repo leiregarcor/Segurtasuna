@@ -26,44 +26,10 @@
 <html lang="es">
   <?php require "partials/head2.php";?> 
   <body>
-    <script>
-      function nan(dni) {
-    var zenbaki
-    var letr
-    var letra
-    var expresio_erregularra
-   
-    expresio_erregularra = /^\d{8}[a-zA-Z]$/;
-   
-    if(expresio_erregularra.test (dni) == true){
-        zenbaki = dni.substr(0,dni.length-1);
-       letr = dni.substr(dni.length-1,1);
-       zenbaki = zenbaki % 23;
-       letra='TRWAGMYFPDXBNJZSQVHLCKET';
-       letra=letra.substring(zenbaki,zenbaki+1);
-      if (letra!=letr.toUpperCase()) {
-         alert('NAN-a gaizki dago');
-       }
-    }else{
-       alert('NAN-a gaizki dago, formatuak ez du balio');
-    }
-}
-
-function email(mail) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(mail)){
-    } else {
-        alert("Email-a gaizki jarri duzu.");
-    }
-}
-function konprobaketa(dni, mail) {
-    nan(dni);
-    email(mail);
-}
-    </script>
     <?php require 'partials/header.php' ?>
 
     <div class=" d-flex justify-content-center align-items-center">
-      <form action="erregistro.php" method="POST">
+      <form action="erregistro.php" method="POST" name="erregistroForm">
         <div class="form-row">
           <div class="form-group col-md-6">
             <br />
@@ -90,7 +56,7 @@ function konprobaketa(dni, mail) {
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>NAN</label>
-            <input name="NAN" type="text" class="form-control" placeholder="11111111A" />
+            <input name="NAN" type="text" class="form-control" placeholder="11111111A" id="NAN" />
           </div>
           <div class="form-group col-md-6">
             <label>Telefono zenbakia</label>
@@ -105,6 +71,7 @@ function konprobaketa(dni, mail) {
             type="text"
             class="form-control"
             placeholder="example@gmail.com"
+            id="mail"
           />
         </div>
 
@@ -127,14 +94,7 @@ function konprobaketa(dni, mail) {
             <option>Ingenieritza Industriala</option>
           </select>
         </div>
-
-        <input
-          class="btn btn-outline-success"
-          type="button"
-          value="Konprobatu"
-          onclick="konprobaketa($nan, $mail)"
-        />
-        <input type="submit" value="Submit bidaltzeko">
+        <input class="btn btn-outline-success" type="button" value="Bidali" onclick="konprobaketa()">
         <input class="btn btn-outline-danger" type="reset" value="Ezabatu" />
       </form>
     </div>

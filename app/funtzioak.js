@@ -12,6 +12,7 @@ function nan(dni) {
     var letr
     var letra
     var expresio_erregularra
+    var ema=false;
    
     expresio_erregularra = /^\d{8}[a-zA-Z]$/;
    
@@ -22,20 +23,30 @@ function nan(dni) {
        letra='TRWAGMYFPDXBNJZSQVHLCKET';
        letra=letra.substring(zenbaki,zenbaki+1);
       if (letra!=letr.toUpperCase()) {
-         alert('NAN-a gaizki dago');
+         window.alert ('NAN-a gaizki dago');
+       }else{
+           ema=true;
        }
     }else{
-       alert('NAN-a gaizki dago, formatuak ez du balio');
+       window.alert ('NAN-a gaizki dago, formatuak ez du balio');
     }
+    return ema;
 }
 
 function email(mail) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(mail)){
+    var ema=false;
+    if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(mail)){
+        ema=true;
     } else {
-        alert("Email-a gaizki jarri duzu.");
+        alert ("Email-a gaizki jarri duzu.");
     }
+    return ema;
 }
-function konprobaketa(dni, mail) {
-    nan(dni);
-    email(mail);
+function konprobaketa() {
+
+    var dni = document.getElementById("NAN").value;
+    var mail = document.getElementById("mail").value;
+    if(nan(dni) && email(mail)){
+        document.erregistroForm.submit();
+    }
 }
