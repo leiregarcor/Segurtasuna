@@ -74,6 +74,7 @@ $row = mysqli_fetch_array($rst);
       </form>
     </div>
 
-    <footer class="footer"></footer>
+    <?php require 'partials/footer.php' ?>
+    
   </body>
 </html>
