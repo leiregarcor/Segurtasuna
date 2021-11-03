@@ -17,6 +17,6 @@
     <script src="../js/bootstrap.min.js" ></script>
 
     <!-- Gure javascript file -->
-    <script type="text/javascript" src="/funtzioak.js"></script>
+    <script type="text/javascript" src="../funtzioak.js"></script>
 
   </head>
