@@ -26,8 +26,8 @@ if($rst){
 
   <body>
     <header>
-     <div class="cover d-flex justify-content-start align-items-start flex-column p-5">
-
+      <div class="cover d-flex justify-content-center align-items-center flex-column p-5">
+        <h1 style="font-family:cambria">Apunte berriaren datuak sartu </h1>
       </div>
     </header>
 

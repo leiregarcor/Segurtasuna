@@ -1,6 +1,4 @@
 /* CSS files add styling rules to your content */
-
-
 body {
   margin: 5px;
   font-family: 'Noto Sans', sans-serif;
@@ -16,7 +14,7 @@ p.red {
 
 .cover {
   height:400px;
-  background-image:url(https://cdn.glitch.com/5f035f47-de1c-4529-a25e-f6844d784a96%2Fdiscussing-video-course.jpg?v=1632385489430);
+  background-image:url(./assets/fondo.jpg);
   color:white;
   background-size: cover;
   background-position:center;
@@ -32,8 +30,6 @@ p.red {
   background-color:rgba(39,101,255,0.5);
   background-blend-mode:darken;
 }
-
-
 
 /* Navigation grid */
 .footer {  
@@ -92,8 +88,4 @@ p.red {
   padding:5px;
  }
 
-table, th, td {
-  padding:15px;
- /* border: 1px solid black;
-  border-collapse: collapse;*/
-}
+

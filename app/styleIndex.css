@@ -1,15 +1,11 @@
 /* CSS files add styling rules to your content */
 
-
-
-
 body {
 /*  margin: 5px;*/
   font-family: 'Noto Sans', sans-serif;
 	background-size: cover;
 	background-attachment: fixed; 
 }
-
 
 .cover {
   height:400px;
@@ -20,7 +16,6 @@ body {
   background-color:rgba(0,0,0,0.5);
   background-blend-mode: darken ;
 }
-
 
 .container{   
   margin-top:20px;
