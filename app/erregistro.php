@@ -96,6 +96,7 @@
         </div>
         <input class="btn btn-outline-success" type="button" value="Bidali" onclick="konprobaketa()">
         <input class="btn btn-outline-danger" type="reset" value="Ezabatu" />
+        <a class="btn btn-outline-primary" href="login.php" role="button">Login</a>
       </form>
     </div>
 

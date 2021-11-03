@@ -21,7 +21,11 @@ $rst=mysqli_query($conn,$apunteak);
      <div class="cover d-flex justify-content-center align-items-center flex-column p-5" >
         <h1 style="font-family:cambria"> Apunteen Bankua </h1>
         <p style="font-size:140%; font-family:cambria"> Ongi etorri gure apunteen bankura </p>
-        <a href="profilaAldatu.php" class="badge badge-success">Profila editatu</a>
+        <div> <a href="profilaAldatu.php" class="badge badge-success">Profila editatu</a> </div>
+        
+        <br>
+        <div><a href="KonexioaAmaitu.php" class="badge badge-danger">Saioa itxi</a></div>
+        
       </div>
     </header>
 

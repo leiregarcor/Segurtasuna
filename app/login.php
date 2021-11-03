@@ -70,10 +70,7 @@ session_start();
       </form>
     </div>
     
-    <footer class="footer">
-      <button type="button" class="btn btn-social-icon btn-outline-twitter" onclick="location.href='erregistro.php'"><i class="fa fa-twitter"></i></button>      
-      <button type="button" class="btn btn-social-icon btn-outline-github" onclick="location.href='erregistro.php'"><i class="fa fa-github"></i></button>         
-    </footer>
+    <?php require 'partials/footer.php' ?>
 
   </body>
 </html>

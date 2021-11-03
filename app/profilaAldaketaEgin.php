@@ -16,4 +16,8 @@ $gradua= $_POST['gradua'];
 
 $sql="UPDATE `Erabiltzaile` SET `Pasahitza`='$pass',`Izena`='$izena',`Abizena`='$abizena',`NAN`='$nan',`Telefono`='$telef',`Mail`='$mail',`JaioData`='$data',`Gradua`='$gradua' WHERE `LDAP` = '$LDAP'";
 $query = mysqli_query($conn, $sql);
+if($query){
+    header("Location: http://localhost:81/index.php");
+    exit;
+  }
 ?>
