@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 04-11-2021 a las 09:13:58
+-- Tiempo de generación: 04-11-2021 a las 09:42:12
 -- Versión del servidor: 10.6.4-MariaDB-1:10.6.4+maria~focal
 -- Versión de PHP: 7.4.20
 
@@ -51,7 +51,14 @@ INSERT INTO `Apunte` (`Id`, `IgotzeData`, `Irakasgaia`, `Gradua`, `Kurtsoa`, `Fi
 (10, '2021-11-02', 'SI', 'Ingenieritza Mekanikoa', 5, 'linketo', 953989),
 (11, '2021-11-03', 'LKSA', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1RocaWbrogWonFGgiJCSBr7xxf9n8NAEF&export=downloadlink', 953985),
 (12, '2021-11-03', 'SI', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1tV8Z1659L1MNWmMX1AKKuPH4WJtIU4Y3&export=download', 953985),
-(13, '2021-11-03', 'SEO', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1G6NpA6RaCLV3bxNzdxPg1l0h-hy4-6ps&export=download', 654321);
+(13, '2021-11-03', 'SEO', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1G6NpA6RaCLV3bxNzdxPg1l0h-hy4-6ps&export=download', 654321),
+(14, '2021-11-04', 'KSO', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1jZnhhPZD76bx3rpwfdpWEAZtkLBv-SdQ&export=download', 961005),
+(15, '2021-11-04', 'IO', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1kt5XhDmD1nXC4s-Ivod9-4C4ENFq5Pz1&export=download', 961005),
+(16, '2021-11-04', 'DB', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1zrlhes5FwvQjcNu1EVOJqYg1AXBoYmUG&export=download', 961005),
+(17, '2021-11-04', 'Mate diskretua', 'Ingenieritza informatikoa', 1, 'https://drive.google.com/uc?id=1cJHstZSy2NcyvxcYq4lnVsyi5vGMfRis&export=download', 961005),
+(18, '2021-11-04', 'Materialak', 'Ingenieritza Industriala', 2, 'https://i.ytimg.com/vi/UO2EAfB6pTE/maxresdefault.jpg', 953986),
+(19, '2021-11-04', 'Elektronikaren oinarriak', 'Ingenieritza Industriala', 1, 'https://www.youtube.com/watch?v=T5xzmkz87v0', 953986),
+(21, '2021-11-04', 'Elektronikaren oinarriak', 'Ingenieritza Elektronikoa', 1, 'https://www.youtube.com/watch?v=T5xzmkz87v0', 953987);
 
 -- --------------------------------------------------------
 
@@ -113,7 +120,7 @@ ALTER TABLE `Erabiltzaile`
 -- AUTO_INCREMENT de la tabla `Apunte`
 --
 ALTER TABLE `Apunte`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Restricciones para tablas volcadas
