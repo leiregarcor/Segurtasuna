@@ -8,8 +8,8 @@
 5. `git clone` eta kopiatutako link-a itsatsi
 6. `sudo docker build -t web .`
 7. `sudo docker-compose up`
-8. [Ireki](localhost:8890)
+8. [Ireki](http://localhost:8890)
 9. User="Admin" Password="test"
 10. "database", "importar" eta "Examinar" klikatu eta proiektuaren karpetan dagoen "database.sql" aukeratu
 11. continuar klikatu
-12. [Ireki](localhost:81/login.php)
+12. [Ireki](http://localhost:81/login.php)
