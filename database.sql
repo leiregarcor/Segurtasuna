@@ -45,7 +45,6 @@ INSERT INTO `Apunte` (`Id`, `IgotzeData`, `Irakasgaia`, `Gradua`, `Kurtsoa`, `Fi
 (1, '2021-11-03', 'DEA', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1ZvEJpM8IYijT4Eq4QAOoP3qsnVYWU4q7&export=download', 953985),
 (3, '2021-10-19', 'Mecanica de fluidos', 'Ingenieritza Mekanikoa', 2, 'link00', 961005),
 (4, '2021-10-19', 'Mecanica de fluidos', 'Ingenieritza Mekanikoa', 2, 'link01', 961005),
-(7, '2021-11-02', 'EA', 'Ingenieritza Mekanikoa', 4, 'link001', 123456),
 (8, '2021-11-02', 'KIS', 'Ingenieritza Mekanikoa', 5, 'LINK7', 953988),
 (9, '2021-11-02', 'EA', 'Ingenieritza Mekanikoa', 5, 'linketo', 953985),
 (10, '2021-11-02', 'SI', 'Ingenieritza Mekanikoa', 5, 'linketo', 953989),
@@ -84,7 +83,6 @@ CREATE TABLE `Erabiltzaile` (
 
 INSERT INTO `Erabiltzaile` (`LDAP`, `Pasahitza`, `Izena`, `Abizena`, `NAN`, `Telefono`, `Mail`, `JaioData`, `Gradua`) VALUES
 (123446, '12345', 'Luna', 'San Jose', '16102928F', 987654321, 'l@gmail.com', '2021-11-30', 'Ingenieritza Industriala'),
-(123456, '1234', 'Kerman', 'San', '11111111e', 987654321, 'kerman@gmail.com', '2001-10-29', 'Ingenieritza Mekanikoa'),
 (123457, '123', 'Bernar', 'Garcia', '16049111X', 987654321, 'b@gmail.cm', '2021-10-25', 'Ingenieritza Elektronikoa'),
 (654321, 'leire', 'Juan Carlos', 'San Jose', '11916226H', 660045513, 'jotacex1@gmail.com', '2021-11-02', 'Ingenieritza informatikoa'),
 (953985, 'cualquiera', 'Leire', 'Garcia', '16102927Y', 660688416, 'leiregarciaupv@gmail.com', '2001-04-30', 'Ingenieritza informatikoa'),
