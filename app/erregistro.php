@@ -12,11 +12,21 @@
     $data= $_POST['date'];
     $gradua= $_POST['gradua'];
 
-    $sql="INSERT INTO Erabiltzaile VALUES ('$erabiltzaile', '$pass', '$izena', '$abizena', '$nan', '$telef', '$mail', '$data', '$gradua')";
-    $query = mysqli_query($conn, $sql);
-    if($query){
-      header("Location: http://localhost:81/login.php");
-      exit;
+
+    $erabiltzaileaBilatu = "SELECT * FROM `Erabiltzaile` WHERE `LDAP`='$erabiltzaile'";
+    $query = mysqli_query($conn, $erabiltzaileaBilatu);
+    $count = mysqli_num_rows($query);
+    if ($count==1){
+      echo '<script language="javascript">alert("LDAP hori beste erabiltzaile batena da");</script>';
+    }else{
+
+
+      $sql="INSERT INTO Erabiltzaile VALUES ('$erabiltzaile', '$pass', '$izena', '$abizena', '$nan', '$telef', '$mail', '$data', '$gradua')";
+      $query = mysqli_query($conn, $sql);
+      if($query){
+        header("Location: http://localhost:81/login.php");
+        exit;
+      }
     }
   }
 
