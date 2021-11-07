@@ -6,6 +6,8 @@ session_start();
 $IdEzabatu="";
 
 $gradua=$_SESSION['Gradu']; #hemen erabiltzailearen gradua jarriko dugu
+
+#erabiltzailearen gradu berdineko apunteak lortzeko sql query-a
 $apunteak = "SELECT * FROM `Apunte` WHERE `Gradua` = '$gradua'";
 $rst=mysqli_query($conn,$apunteak);
 
