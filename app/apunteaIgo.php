@@ -5,12 +5,13 @@ session_start();
 
 $LDAP= $_SESSION['LDAP']; #uneko erabiltzailearen LDAP ( orain apunteak igoko dituena)
 
+#form-etik lortutako datuak
 $irakasgaia= $_POST['irakasgaia'];
 $gradua= $_POST['gradua'];
 $kurtsoa= $_POST['kurtsoa'];
 $fitx= $_POST['fitx'];
 
-//INSERT INTO `Apunte`(`Id`, `IgotzeData`, `Irakasgaia`, `Gradua`, `Kurtsoa`, `Fitxategia`, `ErabLDAP`) VALUES (NULL,CURDATE(),'LKSA','Ingenieritza informatikoa','2','link','961005')
+#apunte berri bat sortzeko sql query-a
 $apunteak = "INSERT INTO `Apunte` VALUES (NULL, CURDATE(),'$irakasgaia','$gradua','$kurtsoa','$fitx','$LDAP')";
 $rst=mysqli_query($conn,$apunteak);
 
