@@ -1,13 +1,11 @@
 $(document).on("click", "#btnModal", function(){
     var IdEzabatu =$(this).data('id');
     $("#id").val(IdEzabatu);
-    //id-a bidaltzeko modalera:
-    //ezin da zuzenean php sesioko bariable batean gorde, beraz ajax erabiliz php orrira bidaliko dugu bariablea
-
+    //id-a bidaltzeko modalera
 }
 );
 
-function nan(dni) {
+function nan(dni) { //sartutako NAN-aren formatua egokia dela eta existitzen dela zihurtatzeko metodoa 
     var zenbaki
     var letr
     var letra
@@ -33,7 +31,7 @@ function nan(dni) {
     return ema;
 }
 
-function email(mail) {
+function email(mail) { //email-aren formatua izena@zerbitzaria.extensioa dela zihurtatzen duen funtzioa
     var ema=false;
     if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(mail)){
         ema=true;
@@ -42,7 +40,7 @@ function email(mail) {
     }
     return ema;
 }
-function LDAP(ldap) {
+function LDAP(ldap) { //LDAP-ak 6 zenbaki dituela konprobatzen duen metodoa 
     var ema=false;
     if(ldap.length==6){
         ema=true;
@@ -51,7 +49,7 @@ function LDAP(ldap) {
     }
     return ema;
 }
-function telefono(tel) {
+function telefono(tel) { //telefonoak 9 zenbaki dituela konprobatzen duen metodoa 
     var ema=false;
     if(tel.length==9){
         ema=true;
@@ -60,7 +58,7 @@ function telefono(tel) {
     }
     return ema;
 }
-function konprobaketa() {
+function konprobaketa() { //erregistro orrian sartutako datuen konprobaketa guztiak egiten dituen funtzioa, dena formatu egokian egotekotan submit egiten duen metodoa
 
     var dni = document.getElementById("NAN").value;
     var mail = document.getElementById("mail").value;
@@ -70,7 +68,7 @@ function konprobaketa() {
         document.erregistroForm.submit();
     }
 }
-function konprobaketa2() {
+function konprobaketa2() {  //profileko orrian sartutako datuen konprobaketa guztiak egiten dituen funtzioa, dena formatu egokian egotekotan submit egiten duen metodoa
 
     var dni = document.getElementById("NAN2").value;
     var mail = document.getElementById("mail2").value;
