@@ -2,6 +2,7 @@
   $host = $_SERVER['HTTP_HOST'];
   include ("DBKonexioa.php");
   if($conn){
+    #form-etik lortutako datuak
     $erabiltzaile= $_POST['LDAP'];
     $pass= $_POST['pasahitza'];
     $izena= $_POST['izena'];
@@ -12,15 +13,15 @@
     $data= $_POST['date'];
     $gradua= $_POST['gradua'];
 
-
+    #sartutako LDAP-a duen erabiltzailerik existitzen bada jakiteko sql query-a
     $erabiltzaileaBilatu = "SELECT * FROM `Erabiltzaile` WHERE `LDAP`='$erabiltzaile'";
     $query = mysqli_query($conn, $erabiltzaileaBilatu);
     $count = mysqli_num_rows($query);
+    #erabiltzailea jada existitzen bada 
     if ($count==1){
       echo '<script language="javascript">alert("LDAP hori beste erabiltzaile batena da");</script>';
     }else{
-
-
+      #erabiltzailea existitzen ez bada berri bat sortzeko sql query-a  
       $sql="INSERT INTO Erabiltzaile VALUES ('$erabiltzaile', '$pass', '$izena', '$abizena', '$nan', '$telef', '$mail', '$data', '$gradua')";
       $query = mysqli_query($conn, $sql);
       if($query){
