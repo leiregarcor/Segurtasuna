@@ -5,6 +5,7 @@ session_start();
 
 $LDAP= $_SESSION['LDAP']; #lortu dugu aldatu nahi dugun erabiltzailearen LDAP
 
+#form-etik lortutako datuak
 $pass= $_POST['pasahitza'];
 $izena= $_POST['izena'];
 $abizena= $_POST['abizena'];
@@ -14,6 +15,7 @@ $mail= $_POST['mail'];
 $data= $_POST['date'];
 $gradua= $_POST['gradua'];
 
+#Erabiltzailearen datuak eskuratzeko sql query-a
 $erabiltzaile = "SELECT * FROM `Erabiltzaile` WHERE `LDAP` = '$LDAP'";
 $rst=mysqli_query($conn,$erabiltzaile);
 $row = mysqli_fetch_array($rst);
