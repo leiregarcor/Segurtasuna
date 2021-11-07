@@ -7,6 +7,7 @@ $id= $_GET['id']; #lortu dugu aldatu nahi dugun apuntearen Id
 
 $LDAP= $_SESSION['LDAP']; #uneko erabiltzailearen LDAP
 
+#aukeratutako apuntearen datu guztiak lortzeko egin bhear den sql query-a
 $apunteak = "SELECT * FROM `Apunte` WHERE `Id` = '$id'";
 $rst=mysqli_query($conn,$apunteak);
 $row = mysqli_fetch_array($rst);
