@@ -2,15 +2,17 @@
 require "DBKonexioa.php";
 
 session_start();
-
+    
+    #form-etik lortutako datuak 
     $erabiltzaile= $_POST['LDAP'];
     $pass= $_POST['pasahitz'];
-      
+
+    #sartutako erabiltzaile eta pasahitza erregistratuta daudela konprobatzeko sql query-a      
     $sql ="SELECT * FROM `Erabiltzaile` WHERE `LDAP` = '$erabiltzaile' and `Pasahitza` = '$pass'";
     $query = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($query);
 
-    if($row['LDAP']!=null){ 
+    if($row['LDAP']!=null){ #erabiltzailea erregistratuta egotekotan 
       $_SESSION['LDAP'] = $erabiltzaile;  
       $_SESSION['Gradu'] = $row['Gradua'];   
       header("Location: http://localhost:81/index.php");
