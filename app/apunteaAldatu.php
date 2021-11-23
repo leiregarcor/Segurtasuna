@@ -25,7 +25,21 @@ $row = mysqli_fetch_array($rst);
       </div>
     </header>
 
-  <body>
+    <script type="text/javascript">
+    var t;
+    window.onload=resetTimer;
+    document.onkeypress=resetTimer;
+    document.onmousemove=resetTimer;
+    function logout(){
+      alert("Minutu batez inaktibo egoteagatik saioa ixten.");
+      location.href='KonexioaAmaitu.php'; 
+    }
+    function resetTimer(){
+      clearTimeout(t);
+      t=setTimeout(logout,60000) //Minutu bateko inaktibitatea ms-etan
+    }
+    </script>
+
     <div class=" d-flex justify-content-center align-items-center">
       <form action="apunteaAldaketaEgin.php" method="POST" >
         <br>

@@ -14,7 +14,8 @@ session_start();
 
     if($row['LDAP']!=null){ #erabiltzailea erregistratuta egotekotan 
       $_SESSION['LDAP'] = $erabiltzaile;  
-      $_SESSION['Gradu'] = $row['Gradua'];   
+      $_SESSION['Gradu'] = $row['Gradua'];
+      $_SESSION['denbora']= date("Y-n-j H:i:s");    
       header("Location: http://localhost:81/index.php");
       exit;      
     }
