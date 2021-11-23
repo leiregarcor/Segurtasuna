@@ -13,3 +13,4 @@
 10. "database", "importar" eta "Examinar" klikatu eta proiektuaren karpetan dagoen "database.sql" aukeratu
 11. continuar klikatu
 12. [Web gunea ireki](http://localhost:81/login.php)
+
