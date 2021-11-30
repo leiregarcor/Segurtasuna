@@ -7,8 +7,13 @@ session_start();
     $erabiltzaile= $_POST['LDAP'];
     $pass= $_POST['pasahitz'];
 
+    #SQL injection ekiditzeko erabiltzailea eta pasahitzak garbitu behar ditugu
+    $garbitutako_erabiltzaile = mysqli_real_escape_string($conn, $erabiltzaile);      
+    $garbitutako_pass = mysqli_real_escape_string($conn, $pass);
+    $pass=md5($garbitutako_pass);
+
     #sartutako erabiltzaile eta pasahitza erregistratuta daudela konprobatzeko sql query-a      
-    $sql ="SELECT * FROM `Erabiltzaile` WHERE `LDAP` = '$erabiltzaile' and `Pasahitza` = '$pass'";
+    $sql ="SELECT * FROM `Erabiltzaile` WHERE `LDAP` = '$garbitutako_erabiltzaile' and `Pasahitza` = '$pass'";
     $query = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($query);
 

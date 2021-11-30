@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 04-11-2021 a las 09:42:12
+-- Tiempo de generación: 30-11-2021 a las 15:01:31
 -- Versión del servidor: 10.6.4-MariaDB-1:10.6.4+maria~focal
 -- Versión de PHP: 7.4.20
 
@@ -42,7 +42,7 @@ CREATE TABLE `Apunte` (
 --
 
 INSERT INTO `Apunte` (`Id`, `IgotzeData`, `Irakasgaia`, `Gradua`, `Kurtsoa`, `Fitxategia`, `ErabLDAP`) VALUES
-(1, '2021-11-03', 'DEA', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1ZvEJpM8IYijT4Eq4QAOoP3qsnVYWU4q7&export=download', 953985),
+(1, '2021-11-30', 'DEA', 'Ingenieritza informatikoa', 2, 'https://drive.google.com/uc?id=1ZvEJpM8IYijT4Eq4QAOoP3qsnVYWU4q7&export=download', 961005),
 (3, '2021-10-19', 'Mecanica de fluidos', 'Ingenieritza Mekanikoa', 2, 'link00', 961005),
 (4, '2021-10-19', 'Mecanica de fluidos', 'Ingenieritza Mekanikoa', 2, 'link01', 961005),
 (8, '2021-11-02', 'KIS', 'Ingenieritza Mekanikoa', 5, 'LINK7', 953988),
@@ -82,16 +82,17 @@ CREATE TABLE `Erabiltzaile` (
 --
 
 INSERT INTO `Erabiltzaile` (`LDAP`, `Pasahitza`, `Izena`, `Abizena`, `NAN`, `Telefono`, `Mail`, `JaioData`, `Gradua`) VALUES
-(123446, '12345', 'Luna', 'San Jose', '16102928F', 987654321, 'l@gmail.com', '2021-11-30', 'Ingenieritza Industriala'),
-(123457, '123', 'Bernar', 'Garcia', '16049111X', 987654321, 'b@gmail.cm', '2021-10-25', 'Ingenieritza Elektronikoa'),
-(654321, 'leire', 'Juan Carlos', 'San Jose', '11916226H', 660045513, 'jotacex1@gmail.com', '2021-11-02', 'Ingenieritza informatikoa'),
-(953985, 'cualquiera', 'Leire', 'Garcia', '16102927Y', 660688416, 'leiregarciaupv@gmail.com', '2001-04-30', 'Ingenieritza informatikoa'),
-(953986, '123', 'Ane', 'Martinez', '79135423J', 987654321, 'ane@gmail.com', '2021-10-25', 'Ingenieritza Industriala'),
-(953987, 'cualquiera', 'Aner', 'Lopez', '79269379V', 987654321, 'aner@gmail.com', '2019-10-28', 'Ingenieritza Elektronikoa'),
-(953988, '123', 'Clara', 'Campoamor', '45950218J', 987654321, 'amor@gmail.com', '2021-10-28', 'Ingenieritza Industriala'),
-(953989, '123', 'Leire', 'Gonzalez', '16103278N', 987654321, 'lei@gmail.com', '2019-09-10', 'Ingenieritza Mekanikoa'),
-(953990, '123', 'Jon', 'Snow', '78995188D', 987654321, 'snow@gmail.com', '2017-08-31', 'Ingenieritza Elektronikoa'),
-(961005, 'prueba', 'Aitor', 'San José', '45893403P', 688875743, 'aitorsanjoseheras@gmail.com', '2001-01-28', 'Ingenieritza informatikoa');
+(123446, '827ccb0eea8a706c4c34a16891f84e7b', 'Luna', 'San Jose', '16102928F', 987654321, 'l@gmail.com', '2021-11-30', 'Ingenieritza Industriala'),
+(123457, '202cb962ac59075b964b07152d234b70', 'Bernar', 'Garcia', '16049111X', 987654321, 'b@gmail.cm', '2021-10-25', 'Ingenieritza Elektronikoa'),
+(234162, '900150983cd24fb0d6963f7d28e17f72', 'Aitor', 'Heras', '11916226H', 987351712, 'a@gmail.com', '2021-11-09', 'Ingenieritza informatikoa'),
+(654321, 'e648d51fc787008ebe1c88498ef8b18c', 'Juan Carlos', 'San Jose', '11916226H', 660045513, 'jotacex1@gmail.com', '2021-11-02', 'Ingenieritza informatikoa'),
+(953985, '32d064da8114739ce7ba481b78a8f868', 'Leire', 'Garcia', '16102927Y', 660688416, 'leiregarciaupv@gmail.com', '2001-04-30', 'Ingenieritza informatikoa'),
+(953986, '202cb962ac59075b964b07152d234b70', 'Ane', 'Martinez', '79135423J', 987654321, 'ane@gmail.com', '2021-10-25', 'Ingenieritza Industriala'),
+(953987, '32d064da8114739ce7ba481b78a8f868', 'Aner', 'Lopez', '79269379V', 987654321, 'aner@gmail.com', '2019-10-28', 'Ingenieritza Elektronikoa'),
+(953988, '202cb962ac59075b964b07152d234b70', 'Clara', 'Campoamor', '45950218J', 987654321, 'amor@gmail.com', '2021-10-28', 'Ingenieritza Industriala'),
+(953989, '202cb962ac59075b964b07152d234b70', 'Leire', 'Gonzalez', '16103278N', 987654321, 'lei@gmail.com', '2019-09-10', 'Ingenieritza Mekanikoa'),
+(953990, '202cb962ac59075b964b07152d234b70', 'Jon', 'Snow', '78995188D', 987654321, 'snow@gmail.com', '2017-08-31', 'Ingenieritza Elektronikoa'),
+(961005, 'c893bad68927b457dbed39460e6afd62', 'Aitor', 'San José', '45893403P', 688875743, 'aitorsanjoseheras@gmail.com', '2001-01-28', 'Ingenieritza informatikoa');
 
 --
 -- Índices para tablas volcadas

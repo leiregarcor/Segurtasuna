@@ -4,7 +4,8 @@
   if($conn){
     #form-etik lortutako datuak
     $erabiltzaile= $_POST['LDAP'];
-    $pass= $_POST['pasahitza'];
+    $passN= $_POST['pasahitza'];
+    $pass= md5($passN);
     $izena= $_POST['izena'];
     $abizena= $_POST['abizena'];
     $nan= $_POST['NAN'];

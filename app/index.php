@@ -18,20 +18,21 @@ $rst=mysqli_query($conn,$apunteak);
   <?php require "partials/head.php";?> 
 
   <body>
-  <script type="text/javascript">
-    var t;
-    window.onload=resetTimer;
-    document.onkeypress=resetTimer;
-    document.onmousemove=resetTimer;
-    function logout(){
-      alert("Minutu batez inaktibo egoteagatik saioa ixten.");
-      location.href='KonexioaAmaitu.php'; 
-    }
-    function resetTimer(){
-      clearTimeout(t);
-      t=setTimeout(logout,60000) //Minutu bateko inaktibitatea ms-etan
-    }
-    </script>
+    <script type="text/javascript">
+        var t;
+        window.onload=resetTimer;
+        document.onkeypress=resetTimer;
+        document.onmousemove=resetTimer;
+        function logout(){
+          alert("Minutu batez inaktibo egoteagatik saioa ixten.");
+          location.href='KonexioaAmaitu.php'; 
+        }
+        function resetTimer(){
+          clearTimeout(t);
+          t=setTimeout(logout,60000) //Minutu bateko inaktibitatea ms-etan
+        }
+      </script>
+      
     <header>
      <div class="cover d-flex justify-content-center align-items-center flex-column p-5" >
         <h1 style="font-family:cambria"> Apunteen Bankua </h1>

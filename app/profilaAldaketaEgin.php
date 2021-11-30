@@ -6,7 +6,8 @@ session_start();
 $LDAP= $_SESSION['LDAP']; #lortu dugu aldatu nahi dugun erabiltzailearen LDAP
 
 #form-etik lortutako datuak
-$pass= $_POST['pasahitza'];
+$passN= $_POST['pasahitza'];
+$pass= md5($passN);
 $izena= $_POST['izena'];
 $abizena= $_POST['abizena'];
 $nan= $_POST['NAN2'];
