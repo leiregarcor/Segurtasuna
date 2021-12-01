@@ -5,7 +5,7 @@
 2. "Code" botoia klikatu eta HTTPS link-a kopiatu
 3. Proiektua gordeko duen karpeta sortu
 4. Karpeta terminalean ireki (eskuineko klik "abrir en terminal")
-5. `git clone https://github.com/leiregarcor/Segurtasuna.git`
+5. `git clone -b zuzenketak git@github.com:leiregarcor/Segurtasuna.git`
 6. `sudo docker build -t web .`
 7. `sudo docker-compose up`
 8. [Ireki php my admin](http://localhost:8890)
