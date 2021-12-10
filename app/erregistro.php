@@ -5,7 +5,7 @@
     #form-etik lortutako datuak
     $erabiltzaile= $_POST['LDAP'];
     $passN= $_POST['pasahitza'];
-    $pass= md5($passN);
+    $pass= password_hash($passN, PASSWORD_DEFAULT);
     $izena= $_POST['izena'];
     $abizena= $_POST['abizena'];
     $nan= $_POST['NAN'];
@@ -13,6 +13,11 @@
     $mail= $_POST['mail'];
     $data= $_POST['date'];
     $gradua= $_POST['gradua'];
+    
+    //   GATZA LORTU
+    $karaktereak = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $gatza = substr(str_shuffle($karaktereak), 0 ,25 );
+
 
     #sartutako LDAP-a duen erabiltzailerik existitzen bada jakiteko sql query-a
     $erabiltzaileaBilatu = "SELECT * FROM `Erabiltzaile` WHERE `LDAP`='$erabiltzaile'";
@@ -51,7 +56,8 @@
           <div class="form-group col-md-6">
             <br />
             <label>Pasahitza</label>
-            <input name="pasahitza" type="password" class="form-control" placeholder="Pasahitza" />
+            <input name="pasahitza" type="password" class="form-control" placeholder="pasahitza" />
+            <p style="font-size:60%;color:red;">8 karaketere gutxienez, letra larri eta xeheak eta karaktere bereziak erabili.</p>
           </div>
         </div>
         <div class="form-row">

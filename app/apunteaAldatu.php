@@ -27,18 +27,18 @@ echo '<script language="javascript">alert("Gogoratu apuntearen jabea ez bazara a
     </header>
 
     <script type="text/javascript">
-    var t;
-    window.onload=resetTimer;
-    document.onkeypress=resetTimer;
-    document.onmousemove=resetTimer;
-    function logout(){
-      alert("Minutu batez inaktibo egoteagatik saioa ixten.");
-      location.href='KonexioaAmaitu.php'; 
-    }
-    function resetTimer(){
-      clearTimeout(t);
-      t=setTimeout(logout,60000) //Minutu bateko inaktibitatea ms-etan
-    }
+      var t;
+      window.onload=resetTimer;
+      document.onkeypress=resetTimer;
+      document.onmousemove=resetTimer;
+      function logout(){
+        alert("Minutu batez inaktibo egoteagatik saioa ixten.");
+        location.href='KonexioaAmaitu.php'; 
+      }
+      function resetTimer(){
+        clearTimeout(t);
+        t=setTimeout(logout,60000) //Minutu bateko inaktibitatea ms-etan
+      }
     </script>
 
     <div class=" d-flex justify-content-center align-items-center">
@@ -49,38 +49,28 @@ echo '<script language="javascript">alert("Gogoratu apuntearen jabea ez bazara a
           <div class="form-group col-md-6">
             <br />
             <label>Gradua</label>
-            <?php echo"
-                <input type='text' class='form-control'  value='{$row['Gradua']}' name='gradua'/>
-            ";?>
+            <?php echo" <input type='text' class='form-control'  value='{$row['Gradua']}' name='gradua'/> ";?>
           </div>
           <div class="form-group col-md-6">
             <br />
             <label>Kurtsoa</label>
-            <?php echo"
-                <input type='text' class='form-control'  value='{$row['Kurtsoa']}' name='kurtsoa'/>
-            ";?>
+            <?php echo" <input type='text' class='form-control'  value='{$row['Kurtsoa']}' name='kurtsoa'/> ";?>
           </div>
         </div>
         <div>
             <label>Irakasgaia</label>
-            <?php echo"
-                <input type='text' class='form-control'  value='{$row['Irakasgaia']}' name='irakasgaia'/>
-            ";?>
+            <?php echo" <input type='text' class='form-control'  value='{$row['Irakasgaia']}' name='irakasgaia'/>";?>
             
         </div>
         <br>
         <div>
             <label>Egilea</label>
-            <?php echo"
-                <input type='text' class='form-control'  value='{$row['ErabLDAP']}' name='erabLDAP'/>
-            ";?>
+            <?php echo" <input type='text' class='form-control'  value='{$row['ErabLDAP']}' name='erabLDAP'/>";?>
         </div>
         <br>
         <div>
           <label>Link</label>
-            <?php echo"
-                <input type='text' class='form-control'  value='{$row['Fitxategia']}' name='fitxategia'/>
-            ";?>
+            <?php echo" <input type='text' class='form-control'  value='{$row['Fitxategia']}' name='fitxategia'/> ";?>
         </div>
         <br>
         <!-- Aldatzeko/atzera joateko botoiak -->

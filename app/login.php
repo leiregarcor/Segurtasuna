@@ -13,16 +13,18 @@ session_start();
     $pass=md5($garbitutako_pass);
 
     #sartutako erabiltzaile eta pasahitza erregistratuta daudela konprobatzeko sql query-a      
-    $sql ="SELECT * FROM `Erabiltzaile` WHERE `LDAP` = '$garbitutako_erabiltzaile' and `Pasahitza` = '$pass'";
+    $sql ="SELECT * FROM `Erabiltzaile` WHERE `LDAP` = '$garbitutako_erabiltzaile'";
     $query = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($query);
 
-    if($row['LDAP']!=null){ #erabiltzailea erregistratuta egotekotan 
-      $_SESSION['LDAP'] = $erabiltzaile;  
-      $_SESSION['Gradu'] = $row['Gradua'];
-      $_SESSION['denbora']= date("Y-n-j H:i:s");    
-      header("Location: http://localhost:81/index.php");
-      exit;      
+    if($row['LDAP']!=null){ #erabiltzailea erregistratuta egotekotan
+      if(password_verify($garbitutako_pass, $row['Pasahitza'])){
+        $_SESSION['LDAP'] = $erabiltzaile;  
+        $_SESSION['Gradu'] = $row['Gradua'];
+        $_SESSION['denbora']= date("Y-n-j H:i:s");    
+        header("Location: http://localhost:81/index.php");
+        exit; 
+      }       
     }
 ?> 
 
