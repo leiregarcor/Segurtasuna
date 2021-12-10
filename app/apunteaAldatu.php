@@ -11,6 +11,7 @@ $LDAP= $_SESSION['LDAP']; #uneko erabiltzailearen LDAP
 $apunteak = "SELECT * FROM `Apunte` WHERE `Id` = '$id'";
 $rst=mysqli_query($conn,$apunteak);
 $row = mysqli_fetch_array($rst);
+echo '<script language="javascript">alert("Gogoratu apuntearen jabea ez bazara aldaketak ez direla gordeko.");</script>';
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +72,7 @@ $row = mysqli_fetch_array($rst);
         <div>
             <label>Egilea</label>
             <?php echo"
-                <input type='text' class='form-control'  value='{$row['ErabLDAP']}'/>
+                <input type='text' class='form-control'  value='{$row['ErabLDAP']}' name='erabLDAP'/>
             ";?>
         </div>
         <br>
