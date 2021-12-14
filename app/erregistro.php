@@ -13,11 +13,8 @@
     $mail= $_POST['mail'];
     $data= $_POST['date'];
     $gradua= $_POST['gradua'];
-    
-    //   GATZA LORTU
-    $karaktereak = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $gatza = substr(str_shuffle($karaktereak), 0 ,25 );
-
+    $bankuaN= $_POST['banku'];
+    $bankua= openssl_encrypt($bankuaN,"AES-128-ECB","segur");
 
     #sartutako LDAP-a duen erabiltzailerik existitzen bada jakiteko sql query-a
     $erabiltzaileaBilatu = "SELECT * FROM `Erabiltzaile` WHERE `LDAP`='$erabiltzaile'";
@@ -28,7 +25,7 @@
       echo '<script language="javascript">alert("LDAP hori beste erabiltzaile batena da");</script>';
     }else{
       #erabiltzailea existitzen ez bada berri bat sortzeko sql query-a  
-      $sql="INSERT INTO Erabiltzaile VALUES ('$erabiltzaile', '$pass', '$izena', '$abizena', '$nan', '$telef', '$mail', '$data', '$gradua')";
+      $sql="INSERT INTO Erabiltzaile VALUES ('$erabiltzaile', '$pass', '$izena', '$abizena', '$nan', '$telef', '$mail', '$data', '$gradua', '$bankua')";
       $query = mysqli_query($conn, $sql);
       if($query){
         header("Location: http://localhost:81/login.php");
@@ -111,6 +108,16 @@
             <option>Ingenieritza Elektronikoa</option>
             <option>Ingenieritza Industriala</option>
           </select>
+        </div>
+        <div class="form-group ">
+          <label>Banku-kontu zenbakia </label>
+          <input
+            name="banku" 
+            type="text"
+            class="form-control"
+            placeholder="11111111111111111111"
+            id="banku"
+          />
         </div>
         <input class="btn btn-outline-success" type="button" value="Bidali" onclick="konprobaketa()">
         <input class="btn btn-outline-danger" type="reset" value="Ezabatu" />
