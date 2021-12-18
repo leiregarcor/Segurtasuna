@@ -64,8 +64,10 @@ var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/
 function pasahitza(pass) {
     var ema=false;
     alert(ema);
-    if(pass.match(/([a-zA-Z])/) && pass.match(/([0-9])/) && pass.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,%,&,@,#,$,^,*,?,_,~])/)){
+    if(regularExpression.test(pass)){
         ema=true;
+        alert ("Pasahitza segurua da.");
+        alert(ema);
     }else{
         alert ("Pasahitza ez da segurua.");
     }

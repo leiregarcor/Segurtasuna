@@ -24,6 +24,7 @@ session_start();
 
         #loggin erregistroa eramateko sql query-a
         $sql2 ="INSERT INTO `Logging`(`ErabId`, `DataOrdua`, `Arrakastatsua`) VALUES ('$garbitutako_erabiltzaile',LOCALTIME,1)";
+        $query2 = mysqli_query($conn,$sql2);
 
         $_SESSION['LDAP'] = $erabiltzaile;  
         $_SESSION['Gradu'] = $row['Gradua'];
@@ -34,9 +35,8 @@ session_start();
       else{ #sarbidea ez da arrakastatsua izan
         #loggin erregistroa eramateko sql query-a
         $sql2 ="INSERT INTO `Logging`(`ErabId`, `DataOrdua`, `Arrakastatsua`) VALUES ('$garbitutako_erabiltzaile',LOCALTIME,0)";
-      }
-      
-      $query2 = mysqli_query($conn,$sql2);    
+        $query2 = mysqli_query($conn,$sql2);
+      }    
     }
 ?> 
 

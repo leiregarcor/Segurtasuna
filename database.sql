@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 18-12-2021 a las 09:19:20
--- Versión del servidor: 10.6.4-MariaDB-1:10.6.4+maria~focal
+-- Tiempo de generación: 18-12-2021 a las 09:56:19
+-- Versión del servidor: 10.6.5-MariaDB-1:10.6.5+maria~focal
 -- Versión de PHP: 7.4.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -89,6 +89,28 @@ INSERT INTO `Erabiltzaile` (`LDAP`, `Pasahitza`, `Izena`, `Abizena`, `NAN`, `Tel
 (911222, '$2y$10$Ho9PCZrGhZ2tV7VeEEaoLu3JBPYkC41xgO9Wf4pPg3OpfU6pwHnLS', 'Jon', 'Blanco', '45950218J', 987351712, 'example@gmail.com', '2021-12-03', 'Ingenieritza Elektronikoa', '0'),
 (961005, '$2y$10$eQ5jxDL.WQaMvuCeb6qZb.5NMpeJnj2pUyjsAgnN7YYAhRWolhPFa', 'Aitor', 'San José', '45893403P', 688875743, 'aitorsanjoseheras@gmail.com', '2001-01-28', 'Ingenieritza informatikoa', '/7jdD3ZrA4PUdmUtcroerHBX7y/5apqRwQ4maGYiKSA=');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Logging`
+--
+
+CREATE TABLE `Logging` (
+  `ErabId` int(11) NOT NULL,
+  `DataOrdua` datetime NOT NULL,
+  `Arrakastatsua` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `Logging`
+--
+
+INSERT INTO `Logging` (`ErabId`, `DataOrdua`, `Arrakastatsua`) VALUES
+(961005, '2021-12-18 09:47:51', 0),
+(961005, '2021-12-18 09:49:17', 0),
+(961005, '2021-12-18 09:50:51', 0),
+(961005, '2021-12-18 09:51:01', 1);
+
 --
 -- Índices para tablas volcadas
 --
@@ -105,6 +127,12 @@ ALTER TABLE `Apunte`
 --
 ALTER TABLE `Erabiltzaile`
   ADD PRIMARY KEY (`LDAP`);
+
+--
+-- Indices de la tabla `Logging`
+--
+ALTER TABLE `Logging`
+  ADD PRIMARY KEY (`ErabId`,`DataOrdua`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -125,6 +153,12 @@ ALTER TABLE `Apunte`
 --
 ALTER TABLE `Apunte`
   ADD CONSTRAINT `Apunte_ibfk_1` FOREIGN KEY (`ErabLDAP`) REFERENCES `Erabiltzaile` (`LDAP`);
+
+--
+-- Filtros para la tabla `Logging`
+--
+ALTER TABLE `Logging`
+  ADD CONSTRAINT `Logging_ibfk_1` FOREIGN KEY (`ErabId`) REFERENCES `Erabiltzaile` (`LDAP`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
