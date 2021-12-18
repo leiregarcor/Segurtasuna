@@ -26,7 +26,8 @@
     #erabiltzailea jada existitzen bada 
     if ($count==1){
       echo '<script language="javascript">alert("LDAP hori beste erabiltzaile batena da");</script>';
-    }else{
+    }
+    else{
       #erabiltzailea existitzen ez bada berri bat sortzeko sql query-a  
       $sql="INSERT INTO Erabiltzaile VALUES ('$erabiltzaile', '$pass', '$izena', '$abizena', '$nan', '$telef', '$mail', '$data', '$gradua')";
       $query = mysqli_query($conn, $sql);
