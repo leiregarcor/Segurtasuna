@@ -49,6 +49,7 @@ function LDAP(ldap) { //LDAP-ak 6 zenbaki dituela konprobatzen duen metodoa
     }
     return ema;
 }
+
 function telefono(tel) { //telefonoak 9 zenbaki dituela konprobatzen duen metodoa 
     var ema=false;
     if(tel.length==9){
@@ -59,13 +60,24 @@ function telefono(tel) { //telefonoak 9 zenbaki dituela konprobatzen duen metodo
     return ema;
 }
 
+function bankuKontua(bnk) { //telefonoak 9 zenbaki dituela konprobatzen duen metodoa 
+    var ema=false;
+    if(bnk.length==20){
+        ema=true;
+    }else{
+        alert ("Banku kontuak 20 zenbaki izan behar ditu.");
+    }
+    return ema;
+}
+
 function konprobaketa() { //erregistro orrian sartutako datuen konprobaketa guztiak egiten dituen funtzioa, dena formatu egokian egotekotan submit egiten duen metodoa
 
     var dni = document.getElementById("NAN").value;
     var mail = document.getElementById("mail").value;
     var ldap = document.getElementById("LDAP").value;
     var tel = document.getElementById("tel").value;
-    if(nan(dni) && email(mail) && LDAP(ldap) && telefono(tel)){
+    var bnk = document.getElementById("banku").value;
+    if(nan(dni) && email(mail) && LDAP(ldap) && telefono(tel) && bankuKontua(bnk)){
         document.erregistroForm.submit();
     }
 }
@@ -74,7 +86,8 @@ function konprobaketa2() {  //profileko orrian sartutako datuen konprobaketa guz
     var dni = document.getElementById("NAN2").value;
     var mail = document.getElementById("mail2").value;
     var tel = document.getElementById("tel2").value;
-    if(nan(dni) && email(mail) && telefono(tel)){
+    var bnk = document.getElementById("banku").value;
+    if(nan(dni) && email(mail) && telefono(tel) && bankuKontua(bnk) ){
         document.profilaForm.submit(); 
     }
     
