@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 14-12-2021 a las 19:40:50
+-- Tiempo de generación: 18-12-2021 a las 09:19:20
 -- Versión del servidor: 10.6.4-MariaDB-1:10.6.4+maria~focal
 -- Versión de PHP: 7.4.20
 
@@ -86,8 +86,8 @@ INSERT INTO `Erabiltzaile` (`LDAP`, `Pasahitza`, `Izena`, `Abizena`, `NAN`, `Tel
 (235198, '$2y$10$ANbiwsKBsF.IN04Ok1itqeXtclrlQWqUKuXXtKprNUBf60EK0tQdu', 'Enzo', 'Fernandez', '09876542C', 657834292, 'enzofernandez@gmail.com', '2021-12-08', 'Ingenieritza Industriala', 'DAasSzDZFYOILq4qxFOLR/DBS9QrOaWqDa6RUQLvOsg='),
 (756423, '$2y$10$bkxznTXdVMA179WmmACROOQwX19.Y9O40tpODfpurx7vIg2256rWm', 'Ander', 'Prieto', '11916226H', 948576321, 'anderpri@gmail.com', '2021-12-12', 'Ingenieritza Mekanikoa', 'E4vSvRfeVuYzMK0GW+gWY8mXc2oPY1Ldd+vHCfpiHlQ='),
 (900000, '$2y$10$zUP2y3bsIJJYa/ImQ.RR.eWzWxYyLLtAbvPLSRXpudJ/renF2eKCC', 'Unai', 'Gonzalez', '11223344B', 999999999, 'example@gmail.com', '2021-12-02', 'Ingenieritza informatikoa', 'v/fQZzGdjbTh5+DyXNauREKeKjhbwfe2TbYcxNx2Ftg='),
-(911222, '$2y$10$Ho9PCZrGhZ2tV7VeEEaoLu3JBPYkC41xgO9Wf4pPg3OpfU6pwHnLS', 'Jon', 'Blanco', '45950218J', 987351712, 'example@gmail.com', '2021-12-03', 'Ingenieritza informatikoa', '0'),
-(961005, '$2y$10$CPDTqubl1Q08AbGiL4Ylj.1nqPu2LlhBwGNgekriZQFwQCFyU7yQi', 'Aitor', 'San José', '45893403P', 688875743, 'aitorsanjoseheras@gmail.com', '2001-01-28', 'Ingenieritza informatikoa', '/7jdD3ZrA4PUdmUtcroerHBX7y/5apqRwQ4maGYiKSA=');
+(911222, '$2y$10$Ho9PCZrGhZ2tV7VeEEaoLu3JBPYkC41xgO9Wf4pPg3OpfU6pwHnLS', 'Jon', 'Blanco', '45950218J', 987351712, 'example@gmail.com', '2021-12-03', 'Ingenieritza Elektronikoa', '0'),
+(961005, '$2y$10$eQ5jxDL.WQaMvuCeb6qZb.5NMpeJnj2pUyjsAgnN7YYAhRWolhPFa', 'Aitor', 'San José', '45893403P', 688875743, 'aitorsanjoseheras@gmail.com', '2001-01-28', 'Ingenieritza informatikoa', '/7jdD3ZrA4PUdmUtcroerHBX7y/5apqRwQ4maGYiKSA=');
 
 --
 -- Índices para tablas volcadas
@@ -114,7 +114,7 @@ ALTER TABLE `Erabiltzaile`
 -- AUTO_INCREMENT de la tabla `Apunte`
 --
 ALTER TABLE `Apunte`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- Restricciones para tablas volcadas
