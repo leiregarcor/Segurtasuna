@@ -14,11 +14,13 @@ $telef= $_POST['telefono'];
 $mail= $_POST['mail'];
 $data= $_POST['date'];
 $gradua= $_POST['gradua'];
+$bankua= $_POST['banku'];
 
 #Erabiltzailearen datuak eskuratzeko sql query-a
 $erabiltzaile = "SELECT * FROM `Erabiltzaile` WHERE `LDAP` = '$LDAP'";
 $rst=mysqli_query($conn,$erabiltzaile);
 $row = mysqli_fetch_array($rst);
+$banku= openssl_decrypt($row['BankuKontu'],"AES-128-ECB","segur");
 
 ?>
 
@@ -63,8 +65,9 @@ $row = mysqli_fetch_array($rst);
             <br />
             <label>Pasahitza</label>
             <?php echo"
-                <input type='text' class='form-control'  value='{$row['Pasahitza']}' id='pasahitza' name='pasahitza'/>
+                <input type='password' class='form-control' id='pasahitza' name='pasahitza'/>
             ";?>
+            <p style="font-size:60%;color:red;">Hutsik uzten bada pasahitza ez da aldatuko.</p>
           </div>
         </div>
         <div class="form-row">
@@ -121,6 +124,13 @@ $row = mysqli_fetch_array($rst);
             <option>Ingenieritza Industriala</option>
           </select>
         </div>
+        <div class="form-group">
+            <br />
+            <label>Banku-kontu zenbakia</label>
+            <?php echo"
+                <input type='text' class='form-control' value='{$banku}' id='banku' name='banku'/>
+            ";?>
+          </div>
 
         <input class="btn btn-outline-success" type="button" value="Bidali" onclick="konprobaketa2()">
         <a class="btn btn-outline-danger" type="button"  href="index.php">Atzera</a>

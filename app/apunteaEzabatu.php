@@ -6,7 +6,7 @@ session_start();
 $id= $_POST['id']; #lortu dugu aldatu nahi dugun apuntearen Id
 
 #aukeratutako apuntea ezabatzeko sql query-a
-$apuntea = " DELETE FROM `Apunte` WHERE `Id` = '$id'";
+$apuntea = " DELETE FROM `Apunte` WHERE `Id` = '$id' and `ErabLDAP` = '{$_SESSION['LDAP']}'";
 
 $rst=mysqli_query($conn,$apuntea);
 

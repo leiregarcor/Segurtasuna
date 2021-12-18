@@ -57,9 +57,9 @@ $rst=mysqli_query($conn,$apunteak);
             </button>
           </div>
           <div class="modal-body">
+            <p> Gogoratu apuntearen jabea ez bazara ezin izango duzula ezabatu.</p>
             <form action="apunteaEzabatu.php" method="POST" >
               <input name="id" type="hidden" id="id" value="id">
-
               <div class="form-row">
                 <div class="form-group col-md-6">
                     <button type="button" class="btn btn-success form-control" data-dismiss="modal">Ez</button>
