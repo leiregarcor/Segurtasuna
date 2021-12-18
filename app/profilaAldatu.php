@@ -67,6 +67,8 @@ $banku= openssl_decrypt($row['BankuKontu'],"AES-128-ECB","segur");
             <?php echo"
                 <input type='password' class='form-control' id='pasahitza' name='pasahitza'/>
             ";?>
+            <div id="strengthMessage"></div>
+            <br />
             <p style="font-size:60%;color:red;">Hutsik uzten bada pasahitza ez da aldatuko.</p>
           </div>
         </div>

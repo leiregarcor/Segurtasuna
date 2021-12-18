@@ -54,9 +54,10 @@
           <div class="form-group col-md-6">
             <br />
             <label>Pasahitza</label>
-            <input name="pasahitza" type="password" class="form-control" placeholder="pasahitza" id="password"/>
-            <p style="font-size:60%;color:red;">8 karaketere gutxienez, letra larri eta xeheak eta karaktere bereziak erabili.</p>
+            <input name="pasahitza" type="password" class="form-control" placeholder="pasahitza" id="pasahitza"/>
+            <div id="strengthMessage"></div>
           </div>
+          
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">

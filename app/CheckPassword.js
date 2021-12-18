@@ -1,13 +1,13 @@
 $(document).ready(function () {
-    $('#txtPassword').keyup(function () {
-        $('#strengthMessage').html(checkStrength($('#txtPassword').val()))
+    $('#pasahitza').keyup(function () {
+        $('#strengthMessage').html(checkStrength($('#pasahitza').val()))
     })
     function checkStrength(password) {
         var strength = 0
         if (password.length < 6) {
             $('#strengthMessage').removeClass()
             $('#strengthMessage').addClass('Short')
-            return 'Too short'
+            return 'Oso motza'
         }
         if (password.length > 7) strength += 1
         // If password contains both lower and uppercase characters, increase strength value.
@@ -23,15 +23,15 @@ $(document).ready(function () {
         if (strength < 2) {
             $('#strengthMessage').removeClass()
             $('#strengthMessage').addClass('Weak')
-            return 'Weak'
+            return 'Ahula'
         } else if (strength == 2) {
             $('#strengthMessage').removeClass()
             $('#strengthMessage').addClass('Good')
-            return 'Good'
+            return 'Ona'
         } else {
             $('#strengthMessage').removeClass()
             $('#strengthMessage').addClass('Strong')
-            return 'Strong'
+            return 'Segurua'
         }
     }
 });

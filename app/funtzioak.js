@@ -59,31 +59,13 @@ function telefono(tel) { //telefonoak 9 zenbaki dituela konprobatzen duen metodo
     return ema;
 }
 
-var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
-
-function pasahitza(pass) {
-    var ema=false;
-    alert(ema);
-    if(regularExpression.test(pass)){
-        ema=true;
-        alert ("Pasahitza segurua da.");
-        alert(ema);
-    }else{
-        alert ("Pasahitza ez da segurua.");
-    }
-    return ema;
-}
-
-
-
 function konprobaketa() { //erregistro orrian sartutako datuen konprobaketa guztiak egiten dituen funtzioa, dena formatu egokian egotekotan submit egiten duen metodoa
 
     var dni = document.getElementById("NAN").value;
     var mail = document.getElementById("mail").value;
     var ldap = document.getElementById("LDAP").value;
     var tel = document.getElementById("tel").value;
-    var pass = document.getElementById("password").value;
-    if(nan(dni) && email(mail) && LDAP(ldap) && telefono(tel) && pasahitza(pass)){
+    if(nan(dni) && email(mail) && LDAP(ldap) && telefono(tel)){
         document.erregistroForm.submit();
     }
 }
@@ -92,15 +74,8 @@ function konprobaketa2() {  //profileko orrian sartutako datuen konprobaketa guz
     var dni = document.getElementById("NAN2").value;
     var mail = document.getElementById("mail2").value;
     var tel = document.getElementById("tel2").value;
-    var pass = document.getElementById("pasahitza").value;
-    //if(pass=''){
-       // if(nan(dni) && email(mail) && telefono(tel)){    
-           // document.profilaForm.submit();
-        //}
-   // }else{
-        if(nan(dni) && email(mail) && LDAP(ldap) && telefono(tel) && pasahitza(pass)){
-            document.profilaForm.submit();
-       // } 
+    if(nan(dni) && email(mail) && telefono(tel)){
+        document.profilaForm.submit(); 
     }
     
 }
