@@ -1,7 +1,7 @@
 # Segurtasuna proiektua
 ## Leire Garcia eta Aitor San José
 
-1. [Proiektua github-en ireki](https://github.com/leiregarcor/Segurtasuna)
+1. [Proiektua github-en ireki](https://github.com/leiregarcor/Segurtasuna/tree/zuzenketak)
 2. "Code" botoia klikatu eta HTTPS link-a kopiatu
 3. Proiektua gordeko duen karpeta sortu
 4. Karpeta terminalean ireki (eskuineko klik "abrir en terminal")
